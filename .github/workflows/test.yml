@@ -13,6 +13,9 @@ on:
     - CREDITS
     - LICENSE
 
+permissions:
+  contents: read
+
 jobs:
   main:
     runs-on: ${{ matrix.os }}
@@ -88,8 +91,8 @@ jobs:
 
     name: ${{ matrix.name }}
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
+    - uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2.3.4
       with:
         python-version: ${{ matrix.python }}
         architecture: ${{ matrix.arch }}
@@ -118,8 +121,8 @@ jobs:
 #     runs-on: ubuntu-latest
 #     name: Test suite with Python nightly
 #     steps:
-#     - uses: actions/checkout@v2
-#     - uses: actions/setup-python@v2
+#     - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
+#     - uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2.3.4
 #       with:
 #         python-version: '3.11-dev'
 #     - name: Install tox
