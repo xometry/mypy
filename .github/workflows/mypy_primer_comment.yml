@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download diffs
-        uses: actions/github-script@v3
+        uses: actions/github-script@ffc2c79a5b2490bd33e0a41c1de74b877714d736 # v3.2.0
         with:
           script: |
             const fs = require('fs');
@@ -41,7 +41,7 @@ jobs:
 
       # Based on https://github.com/kanga333/comment-hider
       - name: Hide old comments
-        uses: actions/github-script@v3
+        uses: actions/github-script@ffc2c79a5b2490bd33e0a41c1de74b877714d736 # v3.2.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
@@ -72,7 +72,7 @@ jobs:
             }
 
       - name: Post comment
-        uses: actions/github-script@v3
+        uses: actions/github-script@ffc2c79a5b2490bd33e0a41c1de74b877714d736 # v3.2.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
