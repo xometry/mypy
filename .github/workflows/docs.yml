@@ -12,6 +12,9 @@ on:
     - CREDITS
     - LICENSE
 
+permissions:
+  contents: read
+
 jobs:
   docs:
     runs-on: ubuntu-latest
