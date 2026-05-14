@@ -9,6 +9,9 @@ on:
     - '**/*.md'
     - 'mypyc/**'
 
+permissions:
+  contents: read
+
 jobs:
   mypy_primer:
     name: Run mypy_primer
