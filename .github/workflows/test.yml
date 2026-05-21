@@ -13,6 +13,9 @@ on:
     - CREDITS
     - LICENSE
 
+permissions:
+  contents: read
+
 jobs:
   main:
     runs-on: ${{ matrix.os }}
